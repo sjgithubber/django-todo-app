@@ -1,6 +1,7 @@
 # Django Request-Response Flow
+
 ```mermaid
-- flowchart TB
+flowchart TB
     subgraph client["Client Browser"]
         request["HTTP Request"]
         response["HTTP Response"]
@@ -42,7 +43,6 @@
         end
     end
 
-    %% Flow connections
     request --> wsgi_handler
     wsgi_handler --> request_middleware
     request_middleware --> urls
@@ -63,7 +63,6 @@
     template_rendering --> response_middleware
     response_middleware --> response
     
-    %% Add example operations for blog app
     subgraph example["Blog App Example (post_detail)"]
         ex1["1. User requests /blog/post/1/"]
         ex2["2. urls.py matches to post_detail view"]
@@ -74,4 +73,4 @@
         ex7["7. Response sent to browser"]
     end
     
-    ex1 --> ex2 --> ex3 --> ex4 --> ex5 --> ex6 --> ex7
+    ex1 --> ex2 --> ex3 --> ex4 --> ex
