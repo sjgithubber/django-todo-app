@@ -24,7 +24,7 @@ git clone https://github.com/<username>/django-todo-app
 - [Follow the tutorial](https://betterstack.com/community/guides/scaling-python/dockerize-django/) to learn how to deploy the application using Docker.
  
 ```mermaid
-- flowchart TB
+- flowchart TD
     subgraph client["Client Browser"]
         request["HTTP Request"]
         response["HTTP Response"]
